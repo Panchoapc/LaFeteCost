@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CodProd: 1
+  CostoMatPrima: 1.5
+  Nombre: MyString
+  Detalle: MyString
+
+two:
+  CodProd: 1
+  CostoMatPrima: 1.5
+  Nombre: MyString
+  Detalle: MyString

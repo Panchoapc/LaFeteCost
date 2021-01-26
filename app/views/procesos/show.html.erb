@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id proceso:</strong>
+  <%= @proceso.Id_proceso %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @proceso.Nombre %>
+</p>
+
+<p>
+  <strong>Q operarios:</strong>
+  <%= @proceso.Q_Operarios %>
+</p>
+
+<p>
+  <strong>Q ayudantes:</strong>
+  <%= @proceso.Q_Ayudantes %>
+</p>
+
+<%= link_to 'Edit', edit_proceso_path(@proceso) %> |
+<%= link_to 'Back', procesos_path %>

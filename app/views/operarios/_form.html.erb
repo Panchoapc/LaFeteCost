@@ -1,0 +1,27 @@
+<%= form_with(model: operario) do |form| %>
+  <% if operario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(operario.errors.count, "error") %> prohibited this operario from being saved:</h2>
+
+      <ul>
+        <% operario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :TipoOperario %>
+    <%= form.text_field :TipoOperario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CostoHora %>
+    <%= form.text_field :CostoHora %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Operario < ApplicationRecord
+end

@@ -1,0 +1,46 @@
+<%= form_with(model: proceso) do |form| %>
+  <% if proceso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proceso.errors.count, "error") %> prohibited this proceso from being saved:</h2>
+
+      <ul>
+        <% proceso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Id_proceso %>
+    <%= form.number_field :Id_proceso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nombre %>
+    <%= form.text_field :Nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Q_Operarios %>
+    <%= form.number_field :Q_Operarios %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Q_Ayudantes %>
+    <%= form.number_field :Q_Ayudantes %>
+  </div>
+
+  <div class="field">
+  
+    <select name="Maquina_id">
+      <%= Maquina.all.each do |maq| %>
+        <option value="<%= maq.Maquina_id %>"><%= maq.NombreMaquina %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

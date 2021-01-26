@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipooperario:</strong>
+  <%= @operario.TipoOperario %>
+</p>
+
+<p>
+  <strong>Costohora:</strong>
+  <%= @operario.CostoHora %>
+</p>
+
+<%= link_to 'Edit', edit_operario_path(@operario) %> |
+<%= link_to 'Back', operarios_path %>
