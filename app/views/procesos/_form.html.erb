@@ -11,44 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :Id_proceso %>
-    <%= form.number_field :Id_proceso %>
-  </div>
+  <div class="form-control">
+    <%= form.number_field :Id_proceso, class:"form-control", placeholder:"ID del proceso" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :Nombre %>
-    <%= form.text_field :Nombre %>
-  </div>
+    <%= form.text_field :Nombre, class:"form-control", placeholder:"Nombre de la maquina" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :Q_Operarios %>
-    <%= form.number_field :Q_Operarios %>
-  </div>
+    <%= form.number_field :Q_Operarios, class:"form-control", placeholder:"Cantidad de Operarios" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :Q_Ayudantes %>
-    <%= form.number_field :Q_Ayudantes %>
-  </div>
+    <%= form.number_field :Q_Ayudantes, class:"form-control", placeholder:"Cantidad de Ayudantes" %>
+  <br/>
 
   <!-- Con esta mas manual si fucniona
-  <div class="field">
+  <div class="form-control">
     <%= form.label :Maquina_id %>
     <%= form.number_field :Maquina_id %>
   </div-->
-  <div class="field">
-    <%= form.label :Maquina_id %>
-    <%= form.select :Maquina_id, Maquina.pluck(:NombreMaquina ,:Maquina_id) %>
-  </div>
-  <!--div class="field">
-    <select name="Maquina_id" >
-      <%= Maquina.all.each do |maq| %>
-        <option value="<%= maq.Maquina_id %>"><%= maq.NombreMaquina %></option>
-      <% end %>
-    </select>
-  </div-->
+    <%= form.select :Maquina_id, Maquina.pluck(:NombreMaquina ,:Maquina_id), class:"from-control" %>
+  </div><br/>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-dark" %>
   </div>
 <% end %>

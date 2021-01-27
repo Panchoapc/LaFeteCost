@@ -1,3 +1,3 @@
 class Producto < ApplicationRecord
-    has_many :recetum
+    has_one :recetum
 end

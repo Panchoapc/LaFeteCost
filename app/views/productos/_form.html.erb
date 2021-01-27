@@ -11,27 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :CodProd %>
-    <%= form.number_field :CodProd %>
-  </div>
+  <div class="form-control">
+    <%= form.number_field :producto_id, class:"form-control", placeholder:"ID Producto" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :CostoMatPrima %>
-    <%= form.text_field :CostoMatPrima %>
-  </div>
+    <%= form.text_field :CodProd, class:"form-control", placeholder:"Codigo del producto" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :Nombre %>
-    <%= form.text_field :Nombre %>
-  </div>
+    <%= form.text_field :CostoMatPrima, class:"form-control", placeholder:"Costo de la Materia prima" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :Detalle %>
-    <%= form.text_field :Detalle %>
-  </div>
+    <%= form.text_field :Nombre, class:"form-control", placeholder:"Nombre del producto" %>
+  <br/>
+
+    <%= form.text_field :Detalle, class:"form-control", placeholder:"Detalle" %>
+  </div><br/>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-dark" %>
   </div>
 <% end %>

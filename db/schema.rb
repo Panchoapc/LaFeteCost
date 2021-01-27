@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_130925) do
+ActiveRecord::Schema.define(version: 2021_01_27_135059) do
 
   create_table "maquinas", force: :cascade do |t|
     t.integer "Maquina_id"
@@ -39,12 +39,12 @@ ActiveRecord::Schema.define(version: 2021_01_26_130925) do
   end
 
   create_table "productos", force: :cascade do |t|
-    t.integer "CodProd"
     t.float "CostoMatPrima"
     t.string "Nombre"
     t.string "Detalle"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "CodProd"
   end
 
   create_table "receta", force: :cascade do |t|
@@ -52,12 +52,12 @@ ActiveRecord::Schema.define(version: 2021_01_26_130925) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "Proceso_id", null: false
-    t.integer "Producto_id", null: false
+    t.integer "producto_id", null: false
     t.index ["Proceso_id"], name: "index_receta_on_Proceso_id"
-    t.index ["Producto_id"], name: "index_receta_on_Producto_id"
+    t.index ["producto_id"], name: "index_receta_on_producto_id"
   end
 
   add_foreign_key "procesos", "Maquinas"
   add_foreign_key "receta", "Procesos"
-  add_foreign_key "receta", "Productos"
+  add_foreign_key "receta", "productos"
 end

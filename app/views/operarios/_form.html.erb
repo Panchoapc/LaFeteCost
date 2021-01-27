@@ -11,17 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :TipoOperario %>
-    <%= form.text_field :TipoOperario %>
-  </div>
+  <div class="form-control">
+    <%= form.text_field :TipoOperario, class:"form-control", placeholder:"Tipo de operario" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :CostoHora %>
-    <%= form.text_field :CostoHora %>
-  </div>
+    <%= form.text_field :CostoHora, class:"form-control", placeholder:"Sueldo por Hora"  %>
+  </div><br/>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= form.submit class:"btn btn-dark" %>
+  </div><br/>
 <% end %>

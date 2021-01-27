@@ -11,22 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :Maquina_id %>
-    <%= form.number_field :Maquina_id %>
-  </div>
+  <div class="form-control">
+    <%= form.number_field :Maquina_id ,class:"form-control", placeholder:"Maquina ID" %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :NombreMaquina %>
-    <%= form.text_field :NombreMaquina %>
-  </div>
+    <%= form.text_field :NombreMaquina ,class:"form-control", placeholder:"Nombre de la maquina"  %>
+  <br/>
 
-  <div class="field">
-    <%= form.label :CostoHora %>
-    <%= form.text_field :CostoHora %>
-  </div>
+    <%= form.text_field :CostoHora ,class:"form-control", placeholder:"Costo por Hora" %>
+  </div><br/>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-dark" %>
   </div>
 <% end %>

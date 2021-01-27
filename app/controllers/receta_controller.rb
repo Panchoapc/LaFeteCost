@@ -64,6 +64,6 @@ class RecetaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recetum_params
-      params.require(:recetum).permit(:Id_receta)
+      params.require(:recetum).permit(:Id_receta, :Proceso_id, :producto_id)
     end
 end
