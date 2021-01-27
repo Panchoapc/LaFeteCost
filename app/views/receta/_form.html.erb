@@ -13,10 +13,10 @@
 
   <div class="form-control">
     <%= form.number_field :Id_receta, class:"form-control", placeholder:"ID Producto" %>
-  <br/>
+    <br/>
 
     <%= form.select :Proceso_id, Proceso.pluck(:Nombre ,:Id_proceso) %>
-  <br/>
+    <br/><br/>
 
     <%= form.select :producto_id, Producto.pluck(:CodProd) %>
   </div><br/>
