@@ -31,14 +31,22 @@
     <%= form.number_field :Q_Ayudantes %>
   </div>
 
+  <!-- Con esta mas manual si fucniona
   <div class="field">
-  
-    <select name="Maquina_id">
+    <%= form.label :Maquina_id %>
+    <%= form.number_field :Maquina_id %>
+  </div-->
+  <div class="field">
+    <%= form.label :Maquina_id %>
+    <%= form.select :Maquina_id, Maquina.pluck(:NombreMaquina ,:Maquina_id) %>
+  </div>
+  <!--div class="field">
+    <select name="Maquina_id" >
       <%= Maquina.all.each do |maq| %>
         <option value="<%= maq.Maquina_id %>"><%= maq.NombreMaquina %></option>
       <% end %>
     </select>
-  </div>
+  </div-->
 
   <div class="actions">
     <%= form.submit %>

@@ -9,6 +9,7 @@
       <th>Nombre</th>
       <th>Q operarios</th>
       <th>Q ayudantes</th>
+      <th>Maquina_id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= proceso.Nombre %></td>
         <td><%= proceso.Q_Operarios %></td>
         <td><%= proceso.Q_Ayudantes %></td>
+        <td><%= proceso.Maquina_id %></td>
         <td><%= link_to 'Show', proceso %></td>
         <td><%= link_to 'Edit', edit_proceso_path(proceso) %></td>
         <td><%= link_to 'Destroy', proceso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
